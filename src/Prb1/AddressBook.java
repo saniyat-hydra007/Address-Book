@@ -128,20 +128,17 @@ public AddressBook() throws FileNotFoundException {
                 try {
                     FileInputStream f = new FileInputStream("A.txt");
                     Scanner reader2 = new Scanner(f);
+
                     String search = reader2.toString();
+
                     while (reader2.hasNextLine()){
+
                         String s = reader2.nextLine();
                         String str[] = s.split(" ");
 
                         if (data4.equals(str[0].trim())) {
                             jta2.setText(s);
                         }
-/*
-                        else {
-                            jta2.setText("Information not found");
-                        }
-
- */
                     }
                     reader2.close();
                     } catch(IOException exception){
